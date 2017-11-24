@@ -51,7 +51,7 @@ public class ServletRegistro extends HttpServlet {
             response.sendRedirect("inicioSesion.jsp");
         } else{
             response.sendRedirect("registroUsuario.jsp");
-            request.getSession().setAttribute("mensaje3", "No fue posible registrar su usuario.");
+            request.getSession().setAttribute("mensaje3", "No se registro");
         }
         
     }

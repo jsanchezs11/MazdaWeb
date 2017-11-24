@@ -61,7 +61,7 @@ public class ServletLogin extends HttpServlet {
                 request.getSession().setAttribute("Usuario", usuario);
                 request.getSession().setAttribute("catalogo", catalogo);
                 response.sendRedirect("paginaInicio.jsp");
-                request.getSession().setAttribute("mensaje", "Sesion cerrada.");
+                request.getSession().setAttribute("mensaje", "");
             }
             
             

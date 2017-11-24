@@ -26,13 +26,11 @@
         
         
         <h2> <font face="arial black">Catalogo</font></h2>
-        <div style="overflow: scroll; height: 225px; width:45%; overflow:auto">
-        <table border="1" CELLSPACING="0" cellpadding="8">
-            
-            <tr> <th>Producto</th>
-            <th colspan="2" >Detalle</th>
-            </tr>
-            
+        <div style="width:100%; overflow:auto">
+        <table  border="1" cellpadding="0" cellspacing="0" > <colgroup><col span="7" > </colgroup>
+        <tbody>
+       
+
             <%
             List<Producto> productos = (List<Producto>) request.getSession().getAttribute("catalogo");
             DecimalFormat df = new DecimalFormat("$###,###.###");
@@ -42,74 +40,46 @@
             
             <% if (p.getVehiculo() != null){%>
             
-            <% if (p.getVehiculo().getModelo().equalsIgnoreCase("6")){%>
-                <tr> <td rowspan="6" ><img src="mazda6.png" width="300px" height="160px"/></td>
+            <% if (p.getVehiculo().getModelo().equalsIgnoreCase("1")){%>
+            <tr > <td rowspan="2"><img src="mazda1.png" width="300px" height="160px"/></td>
             <%}%>
             
-            <% if (p.getVehiculo().getModelo().equalsIgnoreCase("cx-5")){%>
-                <tr> <td rowspan="6" ><img src="cx-5.png" width="300px" height="160px"/></td>
-            <%}%>
-                    
             <% if (p.getVehiculo().getModelo().equalsIgnoreCase("2")){%>
-                <tr> <td rowspan="6" ><img src="mazda2.png" width="300px" height="160px"/></td>
+                <tr> <td rowspan="2"><img src="mazda2.png" width="300px" height="160px"/></td>
             <%}%>
                     
             <% if (p.getVehiculo().getModelo().equalsIgnoreCase("3")){%>
-                <tr><td rowspan="6" ><img src="mazda3.jpg" width="300px" height="160px"/></td>
+                <tr> <td rowspan="2"><img src="mazda3.png" width="300px" height="160px"/></td>
             <%}%>
                     
-            <% if (p.getVehiculo().getModelo().equalsIgnoreCase("cx-9")){%>
-                <tr > <td rowspan="6" ><img src="cx-9.png" width="300px" height="160px"/></td>
+            <% if (p.getVehiculo().getModelo().equalsIgnoreCase("4")){%>
+                <tr><td rowspan="2"><img src="mazda4.png" width="300px" height="160px"/></td>
             <%}%>
+                    
+                <th style="width:10%" >id</th>
+                <th style="width:10%">marca</th>
+                <th style="width:10%">modelo</th>
+                <th style="width:10%">año</th>
+                <th style="width:10%">cantidad</th>
+                <th style="width:10%">precio</th>
+                </tr>
+
             
-            <th>Id</th>
-            <td><%= p.getIdProducto() %></td>
-            </tr>
-
-            <tr> <th>Marca</th>
-            <td><%= p.getVehiculo().getMarca() %></td>
-            </tr>
-
-            <tr><th>Modelo</th>
-            <td><%= p.getVehiculo().getModelo() %></td>
-            </tr>
-
-            <tr><th>Año</th>
-            <td><%= p.getVehiculo().getAnio() %></td>
-            </tr>
-
-            <tr> <th>Precio</th>
-            <td><%= df.format(p.getVehiculo().getPrecio()) %></td>
-            </tr>
-
-            <tr> <th>Stock</th>
-            <td><%= p.getVehiculo().getStock() %></td>
+            <td align="center"><%= p.getIdProducto() %></td>
+            <td align="center"><%= p.getVehiculo().getMarca() %></td>
+            <td align="center"><%= p.getVehiculo().getModelo() %></td>
+            <td align="center"><%= p.getVehiculo().getAnio() %></td>
+            <td align="center"><%= p.getVehiculo().getStock() %></td>
+            <td align="center"><%= df.format(p.getVehiculo().getPrecio()) %></td>
             </tr>
             
             <%}%>
-            
-               
-               <% if (p.getAccesorio() != null){%>
-                    <tr><td rowspan="4"><img src="logo mazda.png" width="300px" height="160px"/></td>
-                    <th>Id</th>
-                    <td><%= p.getIdProducto() %></td>
-                    </tr>
-
-                    <tr><th>Accesorio</th>
-                    <td><%= p.getAccesorio().getNombre() %></td>
-                    </tr>
-
-                    <tr> <th>Precio</th>
-                    <td><%= df.format(p.getAccesorio().getPrecio()) %></td>
-                    </tr>
-
-                    <tr> <th>Stock</th>
-                    <td><%= p.getAccesorio().getStock() %></td>
-                    </tr>
-               <%}%>
                
             <%}
             %>
+
+            </tbody>
+            
         </table>
         </div>
         
