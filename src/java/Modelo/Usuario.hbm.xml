@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-nov-2017 2:45:11 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Usuario" table="Usuario" catalog="Mazda" optimistic-lock="version">
+        <id name="idUsuario" type="java.lang.Integer">
+            <column name="idUsuario" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="catalogo" class="Modelo.Catalogo" fetch="select">
+            <column name="Catalogo_idCatalogo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="rolUsuario" class="Modelo.RolUsuario" fetch="select">
+            <column name="RolUsuario_idRolUsuario" not-null="true" />
+        </many-to-one>
+        <property name="nombreUsuario" type="string">
+            <column name="nombreUsuario" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="45" not-null="true" />
+        </property>
+        <property name="clave" type="string">
+            <column name="clave" length="45" not-null="true" />
+        </property>
+        <set name="carroComprases" table="CarroCompras" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Usuario_idUsuario" not-null="true" />
+            </key>
+            <one-to-many class="Modelo.CarroCompras" />
+        </set>
+    </class>
+</hibernate-mapping>

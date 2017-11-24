@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-nov-2017 2:45:11 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Catalogo" table="Catalogo" catalog="Mazda" optimistic-lock="version">
+        <id name="idCatalogo" type="java.lang.Integer">
+            <column name="idCatalogo" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <set name="productos" table="Catalogo_has_Producto" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="Catalogo_idCatalogo" not-null="true" />
+            </key>
+            <many-to-many entity-name="Modelo.Producto">
+                <column name="Producto_idProducto" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="usuarios" table="Usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Catalogo_idCatalogo" not-null="true" />
+            </key>
+            <one-to-many class="Modelo.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>ServletAdmin</servlet-name>
+        <servlet-class>Controlador.ServletAdmin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletCarrito</servlet-name>
+        <servlet-class>Controlador.ServletCarrito</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>Controlador.ServletLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPedido</servlet-name>
+        <servlet-class>Controlador.ServletPedido</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCarrito</servlet-name>
+        <url-pattern>/ServletCarrito</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/ServletLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPedido</servlet-name>
+        <url-pattern>/ServletPedido</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>inicioSesion.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
