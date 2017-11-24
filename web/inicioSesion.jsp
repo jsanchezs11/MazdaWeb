@@ -15,18 +15,18 @@
     </head>
     <body>
         
-        <img src="logo.png" width="300px" height="160px"/>
+        <img src="http://www.novaeragc.com/wp-content/uploads/2011/11/logoactualMazdadesde1997.jpg" width="300px" height="200px"/>
                 <form method="POST" action="ServletLogin">
                     
                     Usuario:
                     <input type="Text" name="nombreInicio" id="nombreInicio" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
-                    Clave:&nbsp;&nbsp; &nbsp;&nbsp; 
+                    Clave:&nbsp;&nbsp; &nbsp;
                     <input type="Password" name="claveInicio" id="claveInicio" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
-                    <input type="Submit" name="iniciarSesion" value="Iniciar Sesion">
+                    &nbsp;&nbsp&nbsp; &nbsp&nbsp; &nbsp&nbsp; &nbsp&nbsp; &nbsp&nbsp; &nbsp<input type="Submit" name="iniciarSesion" value="Iniciar Sesion">
                 </form>
 
                 <form method="POST" action="registroUsuario.jsp">
-                    <br><input type="Submit" name="registrar" value="Registrarse">
+                    <br>&nbsp; &nbsp&nbsp; &nbsp&nbsp; &nbsp&nbsp; &nbsp&nbsp;&nbsp;&nbsp;&nbsp<input type="Submit" name="registrar" value="Registrarse">
                 </form>
         
         <% if(request.getSession().getAttribute("mensaje") != null) { %>
