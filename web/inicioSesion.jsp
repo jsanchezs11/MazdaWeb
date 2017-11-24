@@ -9,19 +9,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>:: Login ::</title>
+        <title>:: Registro ::</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         
-        <h1>Iniciar Sesion</h1>
-                
+        <img src="logo.png" width="300px" height="160px"/>
                 <form method="POST" action="ServletLogin">
                     
-                    Usuario:<br>
+                    Usuario:
                     <input type="Text" name="nombreInicio" id="nombreInicio" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
-                    Clave:<br>
+                    Clave:&nbsp;&nbsp; &nbsp;&nbsp; 
                     <input type="Password" name="claveInicio" id="claveInicio" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
                     <input type="Submit" name="iniciarSesion" value="Iniciar Sesion">
                 </form>

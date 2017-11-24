@@ -38,7 +38,7 @@ public class ServletRegistro extends HttpServlet {
         String apellido = request.getParameter("apellido");
         String clave = request.getParameter("clave");
         RolUsuario rolCliente = ServicioLogin.instance().solicitarRolUsuario("cliente");
-        Catalogo catalogo = ServicioLogin.instance().solicitarCatalogo("Mazda");
+        Catalogo catalogo = ServicioLogin.instance().solicitarCatalogo("md");
         
         Usuario usuario = new Usuario(catalogo, rolCliente, nombreUsuario, nombre, apellido, clave);
 

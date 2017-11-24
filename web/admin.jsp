@@ -21,8 +21,8 @@
 
     <body>
         
-        <h1><font face="arial black" color="">Bienvenido <%= request.getSession().getAttribute("nombreUsuario") %> </font></h1><br>
-        <h2> <font face="arial black">Lista de usuarios registrados</font></h2>
+      
+        <h2> <font face="arial black">usuarios </font></h2>
         <table border="1" cellspacing="0">
             <tr>
             <th>Id</th>
@@ -44,19 +44,20 @@
                <td><%= u.getApellido() %></td>
                <td><%= u.getClave() %></td>
                
+               
                </tr>
             <%}%>
         </table>
         
         <form method="POST" action="ServletAdmin">
             <br>
-            <h3><font face="arial black">Ingrese un nombre de usuario:</font></h3>
+            <h3><font face="arial black">Ingrese nombre</font></h3>
             <input type="text" name="elimUsuario" id="claveInicio" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left">
             <input type="Submit" name="eliminar" value="Eliminar">
             
         </form>
 
-        <h2> <font face="arial black">Catalogo Mazda</font></h2>
+        <h2> <font face="arial black">Catalogo</font></h2>
         
         <div style="overflow: scroll; height: 225px; width:45%; overflow:auto">
         <table border="1" CELLSPACING="0" cellpadding="8">
@@ -127,17 +128,6 @@
                     <td><%= p.getIdProducto() %></td>
                     </tr>
 
-                    <tr><th>Accesorio</th>
-                    <td><%= p.getAccesorio().getNombre() %></td>
-                    </tr>
-
-                    <tr> <th>Precio</th>
-                    <td><%= df.format(p.getAccesorio().getPrecio()) %></td>
-                    </tr>
-
-                    <tr> <th>Stock</th>
-                    <td><%= p.getAccesorio().getStock() %></td>
-                    </tr>
                <%}%>
                
             <%}

@@ -30,7 +30,7 @@
         </form>
         
         <% if(request.getSession().getAttribute("mensaje3") != null) { %>
-            <h1 style="color: red">
+            <h1 style="color: blue">
             <%= request.getSession().getAttribute("mensaje3") %>
             </h1>
         <% } %>

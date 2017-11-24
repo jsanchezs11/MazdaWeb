@@ -24,10 +24,8 @@
 
     <body>
         
-    <center>
-        <h1>Bienvenido <%= request.getSession().getAttribute("nombreUsuario") %> </h1>
         
-        <h2> <font face="arial black">Catalogo Mazda</font></h2>
+        <h2> <font face="arial black">Catalogo</font></h2>
         <div style="overflow: scroll; height: 225px; width:45%; overflow:auto">
         <table border="1" CELLSPACING="0" cellpadding="8">
             
@@ -126,7 +124,7 @@
         <br>
         <a href="pedidos.jsp"><h4><font face="arial">Ver Carro de Compras</font></h4></a>
         
-    </center>
+    
         <a href="inicioSesion.jsp"><h4><font face="arial">Cerrar Sesion</font></h4></a>
         
     </body>

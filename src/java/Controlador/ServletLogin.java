@@ -66,7 +66,7 @@ public class ServletLogin extends HttpServlet {
             
             
         } else {
-            request.getSession().setAttribute("mensaje", "Nombre y/o clave incorrecta");
+            request.getSession().setAttribute("mensaje", "Acceso incorrecto");
             response.sendRedirect("inicioSesion.jsp");
             
         }
