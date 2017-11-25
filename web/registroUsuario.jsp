@@ -25,7 +25,7 @@
             <br><input type="Text" name="apellido" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
             Clave:
             <br><input type="Password" name="clave" style="font-family: Arial; font-size: 12pt;width:210px;height:20px;text-align:left"><br><br>
-            <input type="Submit" name="crear" value="Crear Usuario">
+            <input type="Submit" name="crear" value="Crear">
             
         </form>
         

@@ -85,14 +85,14 @@
         
         <form method="POST" action="ServletCarrito">
             
-            <h3><font face="arial black">Ingrese el Id del producto</font></h3>
+            <h3><font face="arial black">Ingrese Id carro </font></h3>
             <input type="text" name="producto" id="producto" style="font-family: Arial; font-size: 12pt;width:70px;height:20px;text-align:left">
-            <input type="Submit" name="agregarProducto" value="Agregar al carrito">
+            <input type="Submit" name="agregarProducto" value="Agregar ">
             
         </form>
        
         <br>
-        <a href="pedidos.jsp"><h4><font face="arial">Ver Carro de Compras</font></h4></a>
+        <a href="pedidos.jsp"><h4><font face="arial">Ver Carro</font></h4></a>
         
     
         <a href="inicioSesion.jsp"><h4><font face="arial">Cerrar Sesion</font></h4></a>
